@@ -18,7 +18,7 @@ class DiscordStatusChanger:
         self.headers = {'Authorization': str(input('\u001b[36;1m[\u001b[0m?\u001b[36;1m] \u001b[0m Token   • ')), 'Content-Type': 'application/json'}
         self.sfile = str(input('\u001b[36;1m[\u001b[0m?\u001b[36;1m] \u001b[0m Status File Name • '))
         self.delay = int(input('\u001b[36;1m[\u001b[0m?\u001b[36;1m] \u001b[0m Delay  • '))
-        self.status = open(self.sfile + ".txt", 'r')
+        self.status = open(f"Status Files/{self.sfile}.txt", 'r')
         self.status_list = [line.strip() for line in self.status];self.status.close()
     
     async def change_status(self):
